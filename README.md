@@ -66,7 +66,9 @@ where pay_price>0
 group by 日期;
 ```
 ![5a16e5b8bb320ca18847c75d9789f43.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596851476974-11ed1608-a27e-4679-9dde-0771b948711d.png#align=left&display=inline&height=272&originHeight=272&originWidth=239&size=7546&status=done&style=none&width=239)
+
 将数据可视化：
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596852724851-91ed5663-5121-4813-bba6-a33971afd716.png#align=left&display=inline&height=306&originHeight=306&originWidth=510&size=24856&status=done&style=none&width=510)
 
 观察上图可知：
@@ -87,6 +89,7 @@ from tap_fun
 where pay_price>0;
 ```
 ![486b67e1029ad65345e92e4fa3cd493.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596853039752-05bb5055-acfc-41a8-a804-ff605a85857d.png#align=left&display=inline&height=52&originHeight=52&originWidth=166&size=1796&status=done&style=none&width=166)
+
 明显可以看出，付费玩家的平均在线时长要远远大于全体玩家的平均值，活跃度比他们高的多。
 ### 2.3 在线时长的分布特点
 使用箱线图来分析总体特征，先求出最大值、最小值、中位数和上下四分位数
@@ -132,7 +135,9 @@ WHERE
 	pay_price > 0;
 ```
 ![c5e3c10167067f612f502e4beaf939d.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596860745978-d59bf13f-65a6-4bdb-bd72-410021517186.png#align=left&display=inline&height=52&originHeight=52&originWidth=434&size=2540&status=done&style=none&width=434)
+
 全部玩家与付费玩家在线时长箱线图：
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596861032635-cb77ca4c-c101-4299-a0df-fd2ce691e68c.png#align=left&display=inline&height=302&originHeight=302&originWidth=504&size=13909&status=done&style=none&width=504)
 
 根据以上数据和图表可以得到如下结论：
@@ -181,12 +186,18 @@ WHERE
 	avg_online_minutes >= 15 
 	AND pay_price > 0;
 ```
-![4e2f0a94b02959c8e6b702a2c328bd6.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596865808225-90c065b2-70d4-4f76-b3ea-d6359b961fbb.png#align=left&display=inline&height=53&originHeight=53&originWidth=222&size=1495&status=done&style=none&width=222)
+![1](https://github.com/xiao-Tom/data_analysis/assets/66579096/02b0aba1-ac82-48a6-adcc-546ec003a50d)
+
+
 对数据进行可视化：
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596866110743-8dbee67d-b7eb-4cfe-b309-7e88adc4adec.png#align=left&display=inline&height=256&originHeight=288&originWidth=481&size=6997&status=done&style=none&width=428)
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596866331801-cbfccac6-1e21-4b8b-9921-de1a41339d5a.png#align=left&display=inline&height=250&originHeight=280&originWidth=479&size=7195&status=done&style=none&width=428)
+
 该游戏人均付费率ARPU很低，所明游戏的收入表现较差，但是对比ARPU，平均每个付费用户收入ARPPU很高，是ARPU的6倍有多，那就说明收费玩家的付费能力很强，针对这一点，我们可以做一些付费功能调整和优化，甚至专属大R玩家，让大R玩的更开心。
 付费率只有可怜的2.89%，其实只要简单地开展一个首充活动，比如充1元可获得价值60元的大礼包，就能够很好地提高游戏的付费率了。付费率高，一样可以得到渠道青睐，获得更多推荐展示机会（行业俗称为“吸量”），间接提高游戏的热度。
+
 注：大R，可理解为家里有矿的人，游戏的充值金额很大。每个游戏都有等级划分的制度，共有以下五种：废户、普通用户、VIP用户、SVIP用户、大R用户
 ## 4 玩家游戏习惯分析
 **关键指标**
@@ -225,10 +236,13 @@ sum(pve_win_count)/sum(pve_battle_count) as PVE胜利的概率
 from tap_fun where avg_online_minutes>=15 and pay_price>0;
 ```
 ![85308c3f4ffabe41eeeeeb9c3ad52ca.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596866992724-2509450a-f105-4d55-9dea-1dc732d7ac1c.png#align=left&display=inline&height=51&originHeight=51&originWidth=463&size=3797&status=done&style=none&width=463)
+
 将数据可视化：
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596868952288-3828ec9b-4bcc-473b-ac99-cad937dfe1b3.png#align=left&display=inline&height=288&originHeight=288&originWidth=481&size=10927&status=done&style=none&width=481)
+
+![2](https://github.com/xiao-Tom/data_analysis/assets/66579096/8a620d8b-525d-4966-9ae1-732dd4fe6c74)
 
 从上图可以看出，APA玩家的平均PVE和PVP次数都要高于AU玩家两倍左右，显然APA玩家更愿意花费更多时间在这个游戏上。
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596868977416-2a77c13d-4c5d-466c-8db1-2b90d70fc852.png#align=left&display=inline&height=302&originHeight=302&originWidth=492&size=13046&status=done&style=none&width=492)
 
 在PVE活动中，APA玩家主动发起进攻的概率和胜利的概率与AU玩家基本持平，其中主动发起PVE的概率非常高，可见游戏玩家还是比较熟悉游戏规则，基本上能主动刷副本打怪获取资源或者等级的提升。另外游戏的PVE难度也不高，玩家的PVE胜率高达90%，可见游戏体验较为友好。
