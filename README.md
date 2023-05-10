@@ -49,6 +49,7 @@ from
   from tap_fun) as t2;
 ```
 ![a5186a6b56873333e62308465423b92.png](https://cdn.nlark.com/yuque/0/2020/png/1589762/1596814488858-fce1e6e1-fee6-4a30-aa51-f26ccdc289ab.png#align=left&display=inline&height=51&originHeight=51&originWidth=118&size=1122&status=done&style=none&width=118)
+
 新增玩家有828934人，其中付费玩家有19549人，付费人数占注册总人数的2.36%
 ### 1.4 每日新增用户数量
 ```sql
