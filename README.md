@@ -146,11 +146,11 @@ WHERE
 ## 3 玩家付费情况分析
 **关键指标：**
 AU（Active User）：活跃用户，这里定为游戏时长达15分钟的为活跃用户。
-PU（Paying User）：付费用户
-APA（Active Payment Account）：活跃付费用户数
+PU（Paying User）：付费用户。
+APA（Active Payment Account）：活跃付费用户数。
 ARPU（Average Revenue Per User）：平均每个活跃用户的收入，即可通过总收入/AU计算得出。
 ARPPU（Average Revenue Per Paying User）：平均每个活跃付费用户收入，可通过总收入/APA计算得出。
-PUR（Pay User Rate）：付费比率，可通过APA/AU计算得出
+PUR（Pay User Rate）：付费比率，可通过APA/AU计算得出。
 ### 3.1 每个活跃玩家的收入
 ```sql
 # ARPU = 总收入/AU
